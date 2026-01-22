@@ -193,7 +193,7 @@ namespace RuptureServerManager.Util
                 return;
             }
 
-            string arguments = $"+force_install_dir {_serverPath} +login anonymous +app_update {_steamAppId} validate +quit";
+            string arguments = $"+force_install_dir \"{_serverPath}\" +login anonymous +app_update {_steamAppId} validate +quit";
 
             await InvokeSteamCmdAsync(arguments, logLine =>
             {

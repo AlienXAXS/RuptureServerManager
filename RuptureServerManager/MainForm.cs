@@ -303,7 +303,7 @@ namespace RuptureServerManager
 
             // Example SteamCMD command: login anonymously and quit. Replace with
             // actual commands to update your server (e.g., app_update <id> validate).
-            string arguments = $"+force_install_dir {ServerManager.Instance.GetServerPath()} +login anonymous +app_update 3809400 validate +quit";
+            string arguments = $"+force_install_dir \"{ServerManager.Instance.GetServerPath()}\" +login anonymous +app_update 3809400 validate +quit";
             await SteamCmdManager.Instance.InvokeSteamCmdAsync(arguments, logLine =>
             {
                 AppendConsole(logLine);
